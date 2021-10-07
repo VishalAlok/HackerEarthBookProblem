@@ -14,17 +14,17 @@ class Program
         string[] PageArray = PageNumbers.Split(" ");
         int[] array = new int[SecondNumber];
 
-        for(int i = 0;i<SecondNumber;i++)
+        for (int i = 0; i < SecondNumber; i++)
         {
             array[i] = Convert.ToInt32(PageArray[i].ToString());
         }
         int MyFinalAnswer = 0;
         MyFinalAnswer = MyFinalAnswer + array[0] % 10;
 
-        for(int j=1;j<SecondNumber;j++)
+        for (int j = 1; j < SecondNumber; j++)
         {
             int Num = array[j] % 10;
-            if(Num!=0)
+            if (Num != 0)
             {
                 MyFinalAnswer = (MyFinalAnswer * Num) % 1000000007;
             }
